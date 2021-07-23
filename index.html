@@ -5,6 +5,18 @@
 	<meta name="viewport" content="width=decive-width, initial-scale=1.0">
 	<title>Blog De Cafe</title>
 
+	<!------prefetch  para cargar la siguiente pagina--------->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+	<!------Preload para cargar documentos--------->
+	<link rel="preload" href="assets/css/normalize.css" as="style">
+	<link rel="preload" href="assets/css/style.css" as="style">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+
+	<link rel="preload" href="assets/img/blog1.jpg" as="image">
+
+
+
 	<!------Hojas de estilo--------->
 	<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
@@ -45,7 +57,10 @@
 
 			<article class="entrada">
 				<div class="entrada__imagen">
-					<img src="assets/img/blog1.jpg" alt="imagen blog">
+					<picture>
+						<source loading="lazy" srcset="assets/img/blog1.webp" type="image/webp" >
+						<img loading="lazy" src="assets/img/blog1.jpg" alt="imagen blog">
+					</picture>
 				</div>
 				<div class="entrada__contenido">
 					<h4 class="no-margin">Tipos de granos de café</h4>
@@ -62,7 +77,10 @@
 
 					<article class="entrada">
 				<div class="entrada__imagen">
-					<img src="assets/img/blog2.jpg" alt="imagen blog">
+					<picture>
+						<source loading="lazy" srcset="assets/img/blog2.webp" type="image/webp" >
+						<img loading="lazy" src="assets/img/blog2.jpg" alt="imagen blog">
+					</picture>
 				</div>
 				<div class="entrada__contenido">
 					<h4 class="no-margin">Tres deliciosas recetas de café</h4>
@@ -80,7 +98,10 @@
 
 					<article class="entrada">
 				<div class="entrada__imagen">
-					<img src="assets/img/blog3.jpg" alt="imagen blog">
+					<picture>
+						<source loading="lazy" srcset="assets/img/blog3.webp" type="image/webp" >
+						<img loading="lazy" src="assets/img/blog3.jpg" alt="imagen blog">
+					</picture>
 				</div>
 				<div class="entrada__contenido">
 					<h4 class="no-margin">Beneficios de café</h4>
@@ -157,5 +178,7 @@
 		</div>
 	</footer>
 
+	<!------modernize--------->
+	<script src="assets/js/modernize.js"></script>
 </body>
 </html>

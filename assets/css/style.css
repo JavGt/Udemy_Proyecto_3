@@ -63,9 +63,17 @@ img{
 }
 
 /* header */
-.header{
+.webp .header{ /*Si el navegador soporta webp, entonces abrir esta imagene*/
+	background-image: url(../img/banner.webp);
+
+}
+.no-webp .header{/*Si el navegador no soporta webp, entonces abrir esta imagene*/
 	background-image: url(../img/banner.jpg);
+}
+
+.header{
 	height: 60rem;
+	background-size: cover;
 	background-repeat: no-repeat; /*No se repite*/
 	background-position: center center ; /* Posicionar la imagen al centro cuando se haga pequeño de ambos lados */
 }
